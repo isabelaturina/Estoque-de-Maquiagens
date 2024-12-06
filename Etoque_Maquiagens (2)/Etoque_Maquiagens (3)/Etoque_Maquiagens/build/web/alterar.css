@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* General styling remains the same */
+body { 
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensures the body takes up the full viewport height */
+}
+
+header, footer {
+    background-color: #E57E94;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+iframe {
+    flex: 1; /* Makes the iframe grow to fill available space */
+    width: 100%; /* Occupy full width */
+    border: none; /* Removes the default border */
+}
+
+a {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 35px;
+    width: 150px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #a8325a;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    color: #1F0F16;
+    font-size: 36px;
+    margin: 0;
+     margin-left: 42%;
+}
+
+h2 {
+    font-family: 'Vollkorn', serif;
+    color: #1F0F16;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+form {
+    background-color: #F2C0CB;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"],   input[type="double"]{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Removes the spinner in Firefox */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #E57E94;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 150px;
+    text-align: center;
+    /* margin: auto; */
+    margin-left: 20%;
+    gap: 2%;
+    MARGIN-RIGHT: -16%;
+}
+
+button:hover {
+    background-color: #a8325a;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    button {
+     width: 30%;
+
+    }
+    button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+     width: 111px;
+     text-align: center;
+        /* margin: auto; */
+     margin-left: 13%;
+     MARGIN-RIGHT: -8%;
+
+    }
+}

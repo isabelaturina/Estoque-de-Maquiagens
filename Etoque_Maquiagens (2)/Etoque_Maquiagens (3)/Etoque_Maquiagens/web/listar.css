@@ -1,0 +1,78 @@
+/* Table container */
+.interior_tabela {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Header row */
+th {
+    background-color: #F2C0CB; 
+    color: black;
+    font-family: 'Vollkorn', serif;
+    font-size: 18px;
+    padding: 15px;
+}
+
+/* Data cells */
+td {
+    padding: 12px;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+    color: #000;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+/* Remove bottom border on last row */
+tr:last-child td {
+    border-bottom: none;
+   
+}
+
+/* Alternate row coloring for better readability */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Link styling */
+td a {
+    text-decoration: none;
+    color: #E57E94;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+}
+
+td a:hover {
+    color: #a8325a; /* Darker pink on hover */
+    text-decoration: underline;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+button{
+    background-color: #000;
+    color: #f9f9f9;
+}

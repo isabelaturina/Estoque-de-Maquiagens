@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud-adicionar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>ESTOQUE DE MAQUIAGENS</h1>
+    </header>
+    
+    <main>
+        <h2>Adicionar Produtos</h2>
+
+        <!-- Formulário para enviar os dados -->
+        <div id="formulario-adicionar">
+            <form action="salvar.jsp" method="POST" onsubmit="resetFormDisplay()">
+                <div class="form-group">
+                    <label for="Nome">Nome:</label>
+                    <input type="text" id="Nome" name="Nome" placeholder="Nome do produto" required>
+                </div>
+                <div class="form-group">
+                    <label for="Marca">Marca:</label>
+                    <input type="text" id="Marca" name="Marca" placeholder="Marca do produto" required>
+                </div>
+                <div class="form-group">
+                    <label for="Preco">Preço:</label>
+                    <input type="number" id="Preco" name="Preco" placeholder="Preço do produto" required step="0.01">
+                </div>
+                <div class="button-container">
+                    <button type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Estoque de Maquiagens</p>
+    </footer>
+
+    <script>
+        // Função para evitar duplicação do formulário
+        window.onload = function() {
+            // Verifica se a página foi carregada anteriormente
+            if (sessionStorage.getItem("formDisplayed")) {
+                // Se o formulário já foi exibido, não exibe novamente
+                document.getElementById("formulario-adicionar").style.display = 'none';
+            } else {
+                // Caso contrário, marca que o formulário foi exibido
+                sessionStorage.setItem("formDisplayed", "true");
+            }
+        };
+
+        // Função para resetar a exibição do formulário quando enviado
+        function resetFormDisplay() {
+            sessionStorage.removeItem("formDisplayed");
+        }
+    </script>
+</body>
+
+</html>
